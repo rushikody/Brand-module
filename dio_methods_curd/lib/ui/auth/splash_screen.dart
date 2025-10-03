@@ -1,4 +1,5 @@
 
+import 'package:dio_methods_curd/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -25,7 +26,14 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Image.asset("assets/Images/image.jpg",height: 300,width: 300,fit: BoxFit.cover,)),
+      body: Center(
+        child:Assets.images.image.image(
+            height: 300,
+            width: 300,
+            fit: BoxFit.cover
+        ),
+          // child: Image.asset("assets/Images/image.jpg",height: 300,width: 300,fit: BoxFit.cover,)
+      ),
     );
   }
 }

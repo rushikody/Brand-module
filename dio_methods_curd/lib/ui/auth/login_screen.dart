@@ -5,6 +5,7 @@ import 'package:dio_methods_curd/framework/controller/authcontroller/validation_
 import 'package:dio_methods_curd/framework/repository/authrepoitory/contract/auth_contract.dart';
 import 'package:dio_methods_curd/framework/repository/authrepoitory/model/login_user_model.dart';
 import 'package:dio_methods_curd/framework/utils/hive_init.dart';
+import 'package:dio_methods_curd/gen/assets.gen.dart';
 import 'package:dio_methods_curd/ui/auth/forgot_password.dart';
 import 'package:dio_methods_curd/ui/auth/register_screen.dart';
 import 'package:dio_methods_curd/ui/utils/theme/app_color.dart';
@@ -41,11 +42,15 @@ class _LoginScreenState extends State<LoginScreen> {
           spacing: 10,
           children: [
             Center(
-              child: Image.asset(
-                "assets/Images/login.jpg",
+              child: Assets.images.login.image(
                 height: 250,
                 width: 250,
               ),
+              // child: Image.asset(
+              //   "assets/Images/login.jpg",
+              //   height: 250,
+              //   width: 250,
+              // ),
             ),
             CustomTextWidget(
               text: "Login",
